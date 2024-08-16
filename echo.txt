@@ -1,0 +1,178 @@
+FILENAME: echo.sh
+#!/bin/bash
+
+echo "Starting.."
+
+# Default values
+path="${1:-.}"
+maxdepth="${2:-1}"
+
+for f in $(find "$path" -maxdepth "$maxdepth" -type f); do
+  file=$(basename "$f")
+  printf "%s\n" "FILENAME: $file" >> echo.txt
+  printf "%s\n" "$(<"$f")" >> echo.txt
+  printf "\n\n" >> echo.txt
+done
+
+echo "Done!"
+
+
+FILENAME: README.md
+# echo.sh
+A Bash script that writes content of files in a directory to `echo.txt`.
+This simple script helps to automate chatting with LLM.
+
+
+## Usage
+
+```bash
+./echo.sh [path] [maxdepth]
+```
+
+- `path`: Directory to search (default: current directory)
+- `maxdepth`: Maximum depth of search (default: 1)
+
+## Output
+
+Creates/appends to `echo.txt`, containing:
+- Filename as header
+- File contents
+- Two newlines for separation
+
+## Example
+
+```bash
+./echo.sh . 2
+```
+
+Searches current directory and immediate subdirectories.
+
+## Notes
+
+- Ensure script is executable: `chmod +x echo.sh`
+- Use caution with large directories or files
+- Requires Bash and `find` command
+
+
+FILENAME: echo.txt
+FILENAME: echo.sh
+#!/bin/bash
+
+echo "Starting.."
+
+# Default values
+path="${1:-.}"
+maxdepth="${2:-1}"
+
+for f in $(find "$path" -maxdepth "$maxdepth" -type f); do
+  file=$(basename "$f")
+  printf "%s\n" "FILENAME: $file" >> echo.txt
+  printf "%s\n" "$(<"$f")" >> echo.txt
+  printf "\n\n" >> echo.txt
+done
+
+echo "Done!"
+
+
+FILENAME: README.md
+# echo.sh
+A Bash script that writes content of files in a directory to `echo.txt`.
+This simple script helps to automate chatting with LLM.
+
+
+## Usage
+
+```bash
+./echo.sh [path] [maxdepth]
+```
+
+- `path`: Directory to search (default: current directory)
+- `maxdepth`: Maximum depth of search (default: 1)
+
+## Output
+
+Creates/appends to `echo.txt`, containing:
+- Filename as header
+- File contents
+- Two newlines for separation
+
+## Example
+
+```bash
+./echo.sh . 2
+```
+
+Searches current directory and immediate subdirectories.
+
+## Notes
+
+- Ensure script is executable: `chmod +x echo.sh`
+- Use caution with large directories or files
+- Requires Bash and `find` command
+
+
+FILENAME: echo.txt
+
+
+FILENAME: echo.sh
+#!/bin/bash
+
+echo "Starting.."
+
+# Default values
+path="${1:-.}"
+maxdepth="${2:-1}"
+
+for f in $(find "$path" -maxdepth "$maxdepth" -type f); do
+  file=$(basename "$f")
+  printf "%s\n" "FILENAME: $file" >> echo.txt
+  printf "%s\n" "$(<"$f")" >> echo.txt
+  printf "\n\n" >> echo.txt
+done
+
+echo "Done!"
+
+
+FILENAME: README.md
+# echo.sh
+A Bash script that writes content of files in a directory to `echo.txt`.
+This simple script useful for automating interactions with LLM by preparing multiple file contents for input as single file.
+
+## Usage
+
+```bash
+./echo.sh
+```
+or
+```bash
+./echo.sh [path] [maxdepth]
+```
+
+- `path`: Directory to search (default: current directory)
+- `maxdepth`: Maximum depth of search (default: 1)
+
+## Output
+
+Writes to `echo.txt`, containing:
+- Filename as header
+- File contents
+
+## Example
+
+```bash
+./echo.sh . 2
+```
+
+Searches current directory and immediate subdirectories.
+
+## Notes
+
+- Ensure script is executable: `chmod +x echo.sh`
+- Use caution with large directories or files
+- Requires Bash and `find` command
+
+
+FILENAME: .gitignore
+.idea/
+
+
