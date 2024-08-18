@@ -13,8 +13,8 @@ or
 ./echo.sh [path] [maxdepth]
 ```
 
-- `path`: Directory to search (default: current directory)
-- `maxdepth`: Maximum depth of search (default: 1)
+- `path`: Directory to search (default: ./src)
+- `maxdepth`: Maximum depth of search (default: 5)
 
 ## Output
 

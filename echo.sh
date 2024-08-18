@@ -3,8 +3,8 @@
 echo "Starting.."
 
 # Default values
-path="${1:-.}"
-maxdepth="${2:-1}"
+path="${1:-./src}"
+maxdepth="${2:-5}"
 
 for f in $(find "$path" -maxdepth "$maxdepth" -type f); do
   file=$(basename "$f")
